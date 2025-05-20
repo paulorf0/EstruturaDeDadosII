@@ -1,0 +1,9 @@
+gcc -c ../grafo_orientado.c           
+if ($?) { gcc main.c grafo_orientado.o -o main.exe }
+if ($?) {./main.exe}
+Remove-Item -Force *.o, *.exe    
+
+outro (Se grafo.o existe):
+gcc main.c ../grafo.o -o main.exe 
+if ($?) {./main.exe}
+Remove-Item -Force ../*.o, ../*.exe, *.o, *.exe    
